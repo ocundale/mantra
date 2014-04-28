@@ -93,15 +93,12 @@ body {
         border-bottom: 0;
     }
 }
-.wrapper { 
-min-height: 100%; 
-height: auto !important; 
-height: 100%; 
-margin: 0 auto -250px;
- background: #1E5799; /* old browsers */
-    background: -moz-linear-gradient(top, #002c5a 0%, #79d6f4 100%); /* firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#002c5a), color-stop(100%,#79d6f4)); /* webkit */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002c5a', endColorstr='#79d6f4',GradientType=0 ); /* ie */ } /* corresponds to height of #footer */
+.logo {
+    margin: auto;
+    position: relative;
+    width: 400px;
+    display: block;
+}
 
 #body-wrapper {
 
