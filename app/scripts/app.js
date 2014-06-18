@@ -2,9 +2,6 @@
 
 angular
   .module('mantraApp', [
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
     'ngRoute'
   ])
   .config(function ($routeProvider) {
