@@ -1,0 +1,213 @@
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.withfadeout {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 4s ease-in;
+  -moz-transition: all 4s ease-in;
+  -ms-transition: all 4s ease-in;
+  -o-transition: all 4s ease-in;
+  transition: all 4s ease-in;
+}
+.opium {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #fff;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+.greydout {
+
+
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+.logo {
+    left:50%;
+    margin-left:-200px;
+    top:50%;
+    margin-top:-200px;
+    position: absolute;
+    width: 400px;
+    display: block;
+}
+.venders img {
+    max-width:200px;
+    max-height:50px;
+}
+.venders li {
+    float:left;
+    list-style:none;
+    margin-right:20px;
+}
+#body-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.soundcloud {
+    background: url(../images/soundcloud.png) no-repeat;
+    background-size: 100%;
+}
+.social {
+    margin: 10px;
+    -moz-transition: all 0.7s ease 0s;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    width: 32px;
+    height: 35px;
+    display: block;
+    opacity:0.7;
+}
+.social:hover {
+    opacity:1;
+}
+.facebook {
+    background: url(../images/facebook.png) no-repeat;
+    background-size: 100%;
+}
+.youtube {
+    background: url(../images/youtube.png) no-repeat;
+    background-size: 100%;
+}
+.twitter {
+    background: url(../images/twitter.png) no-repeat;
+    background-size: 100%;
+}
+.icons {
+    list-style: none;
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+.icons li {
+    float:left;
+}
+.header-logo {
+    float:left;
+}
+.mail-link {
+    float: right;
+    margin-top: -57px;
+    font-size: 24px;
+    color: #bbb;
+    -moz-transition: all 0.7s ease 0s;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+}
+.release {
+    background:#eee;
+    border-radius: 4px;
+    padding: 30px 20px;
+}
+.release p {
+    font-size:20px;
+}
+.juno {
+    width:150px;
+}
+.bmsoho {
+    width:80px;
+}
+.redeye {
+    width:100px;
+}
+.surus {
+    width:100px;
+}
+.mail-link:hover {
+    color:#428bca;
+}
+.mantraimg {
+    box-shadow: 1px 1px 4px #333;
+    width:160px;
+    float:right;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
