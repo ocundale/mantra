@@ -48,29 +48,14 @@ body {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
 }
-.withfadeout {
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  -webkit-transition: all 4s ease-in;
-  -moz-transition: all 4s ease-in;
-  -ms-transition: all 4s ease-in;
-  -o-transition: all 4s ease-in;
-  transition: all 4s ease-in;
-}
-.opium {
+.coverscreen {
     width: 100%;
     height: 100%;
     display: block;
     background: #fff;
     position: fixed;
-    z-index: 10;
     left: 0;
     top: 0;
-}
-.greydout {
-
-
 }
 .jumbotron .btn {
     font-size: 21px;
@@ -94,14 +79,25 @@ body {
     width: 400px;
     display: block;
 }
+.venders {
+    padding:0;
+    float:left;
+}
 .venders img {
-    max-width:200px;
-    max-height:50px;
+    max-width:100px;
+    max-height:40px;
+}
+.venders li a{
+    float:left;
+    display: block;
 }
 .venders li {
     float:left;
     list-style:none;
     margin-right:20px;
+}
+.clear {
+    clear:both;
 }
 #body-wrapper {
     height: 100%;
@@ -162,31 +158,19 @@ body {
     -moz-transition: all 0.7s ease 0s;
 }
 .release {
-    background:#eee;
-    border-radius: 4px;
-    padding: 30px 20px;
 }
 .release p {
     font-size:20px;
 }
 .juno {
-    width:150px;
-}
-.bmsoho {
-    width:80px;
-}
-.redeye {
-    width:100px;
-}
-.surus {
-    width:100px;
+    margin-top:11px;
 }
 .mail-link:hover {
     color:#428bca;
 }
 .mantraimg {
+    width:100%;
     box-shadow: 1px 1px 4px #333;
-    width:160px;
     float:right;
 }
 /* Responsive: Portrait tablets and up */
@@ -210,4 +194,45 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
+@-moz-keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
+@keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
+
+.fadeIn {
+    z-index:1;
+    opacity:1;  /* make things visible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    -o-animation-duration:3s;
+    animation-duration:3s;
+}
+
+/* Animation Times - Time for image to fade in
+---------------------------------------------------- */
+.fadeIn-3s {
+
+}
+
+iframe {
+    margin:50px 0 0 0;
+}
+
+/* Animation Delay - Time for image to be delayed
+---------------------------------------------------- */
+.fadeIn-Delay-3s {
+        -webkit-animation-delay:3s;
+        -moz-animation-delay:3s;
+        -o-animation-delay:3s;
+        animation-delay:3s;
 }

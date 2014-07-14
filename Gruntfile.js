@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         }
       },
       css: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/styles.css'],
         tasks: ['cssmin:app'],
         options: {
           livereload: true
