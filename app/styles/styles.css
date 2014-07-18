@@ -80,6 +80,8 @@ p,h1,h2,h3,h4,h5 {
     float:left;
 }
 .venders img {
+    position: relative;
+    z-index: -1;
     max-width:120px;
     max-height:40px;
 }
@@ -196,13 +198,18 @@ p,h1,h2,h3,h4,h5 {
 
 
 .coverscreen {
+    background-image: -webkit-linear-gradient(right, #e9e9e9, #fcfcfc 50%, #e9e9e9);
+    background-image: -moz-linear-gradient(right, #e9e9e9, #fcfcfc 50%, #e9e9e9);
+    background-image: -o-linear-gradient(right, #e9e9e9, #fcfcfc 50%, #e9e9e9);
+    background-image: -ms-linear-gradient(right, #e9e9e9, #fcfcfc 50%, #e9e9e9);
+    background-image: linear-gradient(to left, #e9e9e9, #fcfcfc 50%, #e9e9e9);
     width: 100%;
     height: 100%;
     display: block;
-    background: #fff;
     position: fixed;
     left: 0;
     top: 0;
+    z-index:1;
 }
 
 .logowrap {
@@ -221,9 +228,9 @@ p,h1,h2,h3,h4,h5 {
 .fadeIn {
     z-index:1;
     opacity:1;  /* make things visible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+    -webkit-animation:fadeIn ease-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-out 1;
+    animation:fadeIn ease-out 1;
 
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
