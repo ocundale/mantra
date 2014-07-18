@@ -173,6 +173,7 @@ p,h1,h2,h3,h4,h5 {
     box-shadow: 1px 1px 4px #333;
     float:right;
 }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
@@ -196,6 +197,17 @@ p,h1,h2,h3,h4,h5 {
     }
 }
 
+.dvimage {
+    width:35px;
+    margin-top:-8px;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+.dvimage:hover {
+    width:55px;
+}
 
 .coverscreen {
     background-image: -webkit-linear-gradient(right, #e9e9e9, #fcfcfc 50%, #e9e9e9);
@@ -219,6 +231,25 @@ p,h1,h2,h3,h4,h5 {
     margin: auto;
     top: 50%;
     margin-top: -250px;
+    -webkit-perspective:500px;
+}
+
+.logotext {
+    transition:all 1s ease-in-out;
+    -webkit-transition:all 1s ease-in-out;
+    backface-visibility : hidden;
+    -webkit-transform-origin:50% 50%;
+}
+/*.logotext {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}*/
+
+.logowrap:hover .logotext {
+    -webkit-transform:rotateY(-360deg);
+    -moz-transform:rotateY(-360deg);
+    -ms-transform:rotateY(-360deg);
+    -o-transform:rotateY(-360deg);
 }
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
@@ -255,7 +286,6 @@ iframe {
     animation-delay:3s;
 }
 
-
 .coverscreen {
     transition: all 4s ease;
     -webkit-transition: all 4s ease;
@@ -275,7 +305,7 @@ iframe {
     -o-transform: rotate(0deg);
 }
 
-.coverscreen .logo:hover {
+.logowrap:hover .logo {
     transform: rotate(1020deg);
     -webkit-transform: rotate(1020deg);
     -moz-transform: rotate(1020deg);
