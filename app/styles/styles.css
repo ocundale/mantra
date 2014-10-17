@@ -221,9 +221,10 @@ p,h1,h2,h3,h4,h5 {
     position: fixed;
     left: 0;
     top: 0;
+}
+.container {
     z-index:1;
 }
-
 .logowrap {
     position: relative;
     width: 500px;
@@ -252,9 +253,9 @@ p,h1,h2,h3,h4,h5 {
     -o-transform:rotateY(-360deg);
 }
 /* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
-@-moz-keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
-@keyframes fadeIn { from { opacity:1;z-index:1; } to { opacity:0;z-index:0; } }
+@-webkit-keyframes fadeIn { from { opacity:1;left:0; } to { opacity:0;left:-9999px; } }
+@-moz-keyframes fadeIn { from { opacity:1;left:0; } to { opacity:0;left:-9999px; } }
+@keyframes fadeIn { from { opacity:1;left:0; } to { opacity:0;left:-9999px; } }
 
 .fadeIn {
     z-index:1;
@@ -312,3 +313,15 @@ iframe {
     -ms-transform: rotate(1020deg);
     -o-transform: rotate(1020deg);
 }
+
+.container {
+    animation: showSlow 6s;
+    -moz-animation: showSlow 6s; /* Firefox */
+    -webkit-animation: showSlow 6s; /* Safari and Chrome */
+    -o-animation: showSlow 6s; /* Opera */
+}
+
+@keyframes showSlow { from { opacity:0;} to { opacity:1;} }
+@-moz-keyframes showSlow { /* Firefox */ from { opacity:0;} to { opacity:1;} }
+@-webkit-keyframes showSlow { /* Safari and Chrome */ from { opacity:0;} to { opacity:1;} }
+@-o-keyframes showSlow { /* Opera */ from { opacity:0;} to { opacity:1; } }
